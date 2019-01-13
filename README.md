@@ -1,40 +1,15 @@
-# ScrumLab
-This is a repository dedicated to ScrumLAB front-end project.
+# PlanYourDiet
+This is a repository of web app, which will help you to plan your diet.
 
-## How to start
-To start development follow this instruction:
+## Technology
+App is created in pure:
 
-* `clone` this repo
-* `npm install` all necessary npm packages
-
-
-## Gulp usage
-Avaliable commends for you to type in console:
-
-`gulp` or `gulp serve`  - this will run gulp in browserSync mode, that means gulp will start serwer on your `localhost` and refreash it for you everytime you change `scss`, `js` or `html` file. Using this command will do all the work for you :)
-
-`gulp watch` - runs gulp in watch mode, that will compiles your `custom.scss` into `css/custom.css`
-
-`gulp sass` - compiles sass into CSS & auto-inject into browsers
+* JavaScript
+* HTML
+* CSS and Sass
 
 
-## Folder Structure
-```
-| - development/
-	| - css/      
-	| - fonts/
-	| - images/  
-	| - js/
-	| - scss/
-	| - app.html  
-	| - index.html  
-	| - recipes.html    
-	| - schedules.html
-| - distribution/
-| - package.json
-| - gulpfile.js
-```
+## Link to GitHub page
 
-***where:***
-`distribution` - is used to contain optimized files for the production site.
-`development`  - is used to contain source code.
+
+
