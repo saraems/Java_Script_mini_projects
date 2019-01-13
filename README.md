@@ -11,5 +11,3 @@ App is created in pure:
 
 ## Link to GitHub page
 
-
-
