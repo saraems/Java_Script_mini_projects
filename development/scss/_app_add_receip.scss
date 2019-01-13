@@ -1,0 +1,195 @@
+.add_recipe_page {
+  display: none;
+}
+
+
+.add_recipes_container {
+  width: 100%;
+  padding: 30px 40px 30px 50px;
+  box-sizing: border-box;
+}
+
+.add_recipe_main {
+  height: 650px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: map-get($colors, background);
+  border: 1px dotted map-get($colors, sidePanel);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.button_add_recipe {
+  height: 30px;
+  width: 150px;
+  background-color: map-get($colors, highlighted);
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+
+  &:active {
+    transform: scale(0.8);
+  }
+}
+
+
+.add_recipe_form_container {
+  width: 95%;
+  height: 140px;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+.add_recipe_form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0 10px 0;
+
+  input, textarea {
+    border-radius: 0;
+    outline: none;
+    border: 1px solid map-get($colors, txt);
+    width: 68%;
+    margin-right: 80px;
+    padding: 5px;
+    box-sizing: border-box;
+
+    &:focus {
+      border: 1px solid map-get($colors, highlighted);
+    }
+  }
+
+  input[type=text] {
+    height: 30px;
+  }
+
+  textarea {
+    height: 70px;
+    resize: none;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    overflow-y: scroll;
+  }
+}
+
+
+.recipe-title, .recipe-description {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+.add_recipe_list_container {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.add_recipe_list_description, .add_recipe_list_ingredient{
+  width: 50%;
+  height: 100%;
+  padding-left: 25px;
+  box-sizing: border-box;
+}
+
+
+.add_recipe_list_header {
+  width: 95%;
+  height: 50px;
+  font-size: 24px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  border-bottom: 2px solid map-get($colors, txt);
+
+  p {
+    text-transform: uppercase;
+  }
+}
+
+.add_recipe_ingredient, .add_recipe_description {
+  height: 75px;
+  width: 100%;
+  margin-top: 15px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+
+  .add_me {
+    font-size: 28px;
+    height: 33px;
+    width: 39px;
+    color: map-get($colors, success);
+    cursor: pointer;
+  }
+
+  input[type=text] {
+    border-radius: 0;
+    outline: none;
+    border: 1px solid map-get($colors, txt);
+    width: 88%;
+    height: 30px;
+    margin-top: 3px;
+    padding-left: 5px;
+
+  }
+
+  textarea {
+    border-radius: 0;
+    outline: none;
+    border: 1px solid map-get($colors, txt);
+    width: 89%;
+    height: 75px;
+    margin-top: 3px;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    resize: none;
+
+  }
+
+  input, textarea:focus {
+      border: 1px solid map-get($colors, highlighted);
+  }
+}
+
+
+.recipe {
+  min-height: 200px;
+  overflow-y: scroll;
+  width: 90%;
+  margin-right: 15px;
+}
+

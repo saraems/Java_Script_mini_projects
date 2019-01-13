@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>Zaplanuj Jedzonko</title>
+  <link rel="stylesheet" href="./css/custom.css" />
+  <script src="./js/app.js" charset="utf-8"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Charmonman|Open+Sans:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+</head>
+
+<body>
+<header>
+
+  <div class="container_medium nav_container">
+
+    <h1><a href="index.html"><span class="logo_first_part">Zaplanuj</span><span class="logo_second_part"> Jedzonko</span></a></h1>
+
+    <div class="nav user_name_panel">
+      <div class="nav_userName"> <p>Name</p></div>
+
+      <div class="user_icon_container">
+        <i class="fas fa-user-circle user_icon"></i>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+
+<main class="container_medium app_container">
+
+  <div class="row app_main">
+
+    <div class="col-6-36 side_panel_container">
+
+      <div class="side_panel side_panel_active"><span class="side_panel_block"></span><a href="#" class="side_panel_link">Pulpit</a><i class="fas fa-angle-right arrow"></i></div>
+      <div class="side_panel"><a href="recipes.html" class="side_panel_link">Przepisy</a></div>
+      <div class="side_panel"><a href="schedules.html" class="side_panel_link">Plany</a></div>
+
+    </div>
+
+
+    <div class="col-30-36 main_panel app_first_visit_container first_visit">
+
+      <div class="app_first_visit_form">
+        <h1><span class="welcome2">Witaj</span><br>wygląda na to, że jesteś tutaj <br> pierwszy raz! </h1>
+        <input id="username" type="text" placeholder="tutaj wpisz jak masz na imię"><br>
+        <button class="button_submit_user_name">Gotowe!</button>
+        <br>
+        <br>
+        <p>Podaj nam swoje imię, a my <br> dla Ciebie zorganizujemy naszą aplikację :) </p>
+      </div>
+    </div>
+
+
+    <div class="col-30-36 main_panel further_visit">
+
+      <div class="container_small">
+
+        <div class="row pulpit_user_plan_action_panel">
+
+          <div class="col-3-14"> <div class="pulpit_user_plan_btn add_recipe"><i class="far fa-plus-square plus"></i>dodaj przepis</div> </div>
+          <div class="col-3-14"> <div class="pulpit_user_plan_btn add_plan"><i class="far fa-plus-square plus"></i>dodaj plan </div></div>
+
+          <div class="col-7-14 pulpit_user_notifications_container">
+
+            <div class="app_plan_info info_container"><i class="fas fa-info-circle info"></i><p>Masz już X przepisów, nieźle!</p><i class="fas fa-window-close cross"></i></div>
+            <div class="app_plan_info exclamation_container"><i class="fas fa-exclamation-circle exclamation"></i><p>Pamiętaj, aby dodać plan.</p><i class="fas fa-window-close cross"></i></div>
+            <div class="app_plan_info checked_container"><i class="fas fa-check-circle checked"></i><p>Świetnie że jesteś! Udanego planowania i smaczenego.</p><i class="fas fa-window-close cross"></i></div>
+
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-14-14">
+          <div class="week_user_plan_list">
+          <div class="week_plan_list_header"><p class="yours_plan_for_week_nr">Twój plan tygodnia na {} tydzień:<br><hr>
+          </div>
+
+
+
+          <table class="week_plan_table">
+
+
+            <tr class="table_head">
+              <th>Poniedziałek</th>
+              <th>Wtorek</th>
+              <th>Środa</th>
+              <th>Czwartek</th>
+              <th>Piątek</th>
+            </tr>
+
+            <tr>
+              <td>sniadanie</td>
+              <td>sniadanie</td>
+              <td>sniadanie</td>
+              <td>sniadanie</td>
+              <td>sniadanie</td>
+            </tr>
+
+            <tr>
+              <td>drugie śniadanie</td>
+              <td>drugie śniadanie</td>
+              <td>drugie śniadanie</td>
+              <td>drugie śniadanie</td>
+              <td>drugie śniadanie</td>
+            </tr>
+
+            <tr>
+              <td>zupa</td>
+              <td>zupa</td>
+              <td>zupa</td>
+              <td>zupa</td>
+              <td>zupa</td>
+            </tr>
+
+            <tr>
+              <td>drugie danie</td>
+              <td>drugie danie</td>
+              <td>drugie danie</td>
+              <td>drugie danie</td>
+              <td>drugie danie</td>
+            </tr>
+
+            <tr>
+              <td>kolacja</td>
+              <td>kolacja</td>
+              <td>kolacja</td>
+              <td>kolacja</td>
+              <td>kolacja</td>
+            </tr>
+
+          </table>
+
+
+
+
+          <div class="week_plan_paging">
+
+            <div class="previous_week_plan"><i class="fas fa-angle-double-left"></i>  previous</div>
+            <div class="next_week_plan">next  <i class="fas fa-angle-double-right"></i></div>
+
+          </div>
+        </div>
+
+      </div>
+      </div>
+      </div>
+    </div>
+
+
+    <div class="col-30-36 main_panel add_recipe_page">
+
+
+          <div class="add_recipes_container">
+            <div class="add_recipe_main">
+
+              <div class="recipes_list_header">
+
+                <p>Nowy przepis</p>
+                <button class="button_add_recipe">Zapisz i zamknij </button>
+
+              </div>
+
+              <div class="add_recipe_form_container">
+                <form class="add_recipe_form">
+                  <div class="recipe-title">
+
+                    <label>Nazwa przepisu</label>
+                    <input name="title" type="text" placeholder="Zapiekanka z ziemniakami i brukselką">
+
+                  </div>
+
+                  <div class="recipe-description">
+
+                    <label>Opis przepisu</label>
+                    <textarea id="recipe-description" rows="3" placeholder="Mamusina najlepsza zapiekanka pod słońcem. Można ją podać jako główne danie albo jako kolację. W zapiekance możesz użyć również kiełbasy paprykowej sprawi ona, że zapiekanka będzie ostrzejsza w smaku. Zgodnie z zalecanimi Makłowicza."></textarea>
+
+                  </div>
+                </form>
+              </div>
+
+              <div class="add_recipe_list_container">
+
+
+                <div class="add_recipe_list_description">
+                  <div class="add_recipe_list_header">
+                    <p>Instrukcje</p>
+                  </div>
+                  <div class="add_recipe_description">
+                    <textarea id="recipe_instructions" rows="3"></textarea>
+                    <i class="fas fa-plus-square add_me" id="add_description"></i>
+                  </div>
+                  <div class="recipe">
+                    <ol class="">
+
+                    </ol>
+                  </div>
+                </div>
+
+
+                <div class="add_recipe_list_ingredient">
+                  <div class="add_recipe_list_header">
+                    <p>Składnik</p>
+                  </div>
+                  <div class="add_recipe_ingredient">
+                    <input type="text">
+                    <i class="fas fa-plus-square add_me" id="add_ingredient"></i>
+                  </div>
+                  <div class="recipe">
+                    <ul class="">
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+    <div class="col-30-36 main_panel add_plan_page">
+
+
+      <div class="add_plan_container">
+        <div class="add_plan_main">
+
+
+          <div class="add_plan_header">
+            <p>Nowy plan</p>
+            <button class="button_add_recipe" type="submit">Zapisz i zamknij </button>
+          </div>
+
+
+          <div class="add_plan_form_container">
+            <form class="add_plan_form">
+
+              <div class="plan_form_element">
+                <label>Nazwa planu</label>
+                <input name="title" type="text" placeholder="Plan na jarski tydzień">
+              </div>
+
+              <div class="plan_form_element">
+                <label>Opis planu</label>
+                <textarea id="recipe-description" rows="3" placeholder=""></textarea>
+              </div>
+
+              <div class="plan_form_element">
+                <label>Numer tygodnia</label>
+                <input name="title" type="text" placeholder="2" class="week_nr">
+              </div>
+
+
+            </form>
+          </div>
+
+
+
+          <div class="add_plan_list_container">
+            <table class="add_plan_table">
+              <tr class="table_head">
+                <th></th>
+                <th>Śniadanie</th>
+                <th>Drugie śniadanie</th>
+                <th>Zupa</th>
+                <th>Drugie danie</th>
+                <th>Kolacja</th>
+              </tr>
+
+              <tr>
+                <th class="week_day">Poniedziałek</th>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+              </tr>
+
+              <tr>
+                <th class="week_day">Wtorek</th>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+              </tr>
+
+              <tr>
+                <th class="week_day">Środa</th>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+              </tr>
+
+
+              <tr>
+                <th class="week_day">Czwartek</th>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+              </tr>
+
+
+              <tr>
+                <th class="week_day">Piątek</th>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+              </tr>
+
+
+            </table>
+          </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  </div>
+</main>
+
+
+<script src="js/app.js"></script>
+</body>
+</html>

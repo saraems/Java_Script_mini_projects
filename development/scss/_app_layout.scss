@@ -1,0 +1,90 @@
+.app_container {
+  width: 100%;
+}
+
+.app_main {
+  width: 100%;
+}
+
+.side_panel_container {
+  background-color: map-get($colors, sidePanel);
+  height: 710px;
+  width: 20%;
+}
+
+.main_panel {
+  background-image: url("../images/image.png");
+  height: 710px;
+  width: 80%;
+}
+
+
+.side_panel {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  cursor: pointer;
+
+
+  & a.side_panel_link {
+    display: block;
+    text-decoration: none;    
+    color: white;
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+  }
+  
+  & i.arrow {
+    position: absolute;
+    color: map-get($colors, highlighted);
+    font-size: 30px;
+    right:0;
+    margin-right: 15px;
+  }
+}
+  
+.side_panel_block {
+  position: absolute;
+  height: 75px;
+  width: 5px;
+  background-color: map-get($colors, highlighted);
+  left: 0;
+}
+
+.side_panel_active {
+  font-weight: 700;
+}
+
+.user_name_panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  width: 200px;
+  font-size: 25px;
+  text-align: center;
+
+  & .user_icon {
+    font-size: 40px;
+    line-height: 50px;
+    color: map-get($colors, highlighted);
+    margin-left: 20px;
+    margin-right: 15px;
+    margin-top: 5px;
+  }
+
+  & div.nav_userName, .user_icon_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+

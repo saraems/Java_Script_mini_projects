@@ -1,0 +1,52 @@
+
+.app_first_visit_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app_first_visit_form {
+  font-family:'Open Sans', sans-serif;
+  width: 500px;
+  height: 320px;
+  border: 3px solid transparent;
+  text-align: center;
+
+  & .welcome2 {
+    font-size: 50px;
+  }
+}
+.button_submit_user_name {
+  height: 40px;
+  width: 140px;
+  margin-top: 20px;
+  background: #FF6600;
+  color: #FFFFFA;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+
+  &:active {
+    transform: scale(0.8);
+  }
+
+}
+.username {
+  width: 300px;
+  height: 25px;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+.app_first_visit_form p {
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+

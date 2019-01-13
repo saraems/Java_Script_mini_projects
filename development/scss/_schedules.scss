@@ -1,0 +1,152 @@
+
+.plans_list_container {
+  width: 100%;
+  margin: 30px 50px 30px 40px;
+}
+
+.plans_list {
+  height: 650px;
+  width: 100%;
+  background-color: map-get($colors, background);
+  border: 1px dotted map-get($colors, sidePanel);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.plans_list_header {
+  width: 95%;
+  color: map-get($colors, highlighted);
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  border-bottom: 2px solid map-get($colors, txt);
+
+  & p {
+    display: block;
+    padding: 10px 10px 0 0;
+    text-transform: uppercase;
+  }
+
+  & .add_plans_to_list {
+    color: map-get($colors, success);
+    font-size: 35px;
+    cursor: pointer;
+  }
+}
+
+.plans_list_main {
+  width: 95%;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.plans_list_table_head {
+  width: 95%;
+  height: 30px;
+  margin-top: 20px;
+  padding: 10px 0 10px 0;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  color: #5B605F;
+  border-top: 1px solid map-get($colors, txt);
+  border-bottom: 1px solid map-get($colors, txt);
+
+  & p {
+    display: block;
+  }
+
+  .id {
+    width: 5%;
+
+  }
+
+  .title {
+    width: 20%;
+  }
+
+  .description {
+    width: 50%;
+  }
+
+  .week {
+    width: 10%;
+
+  }
+
+  .action {
+    width: 15%;
+    text-align: right;
+  }
+}
+
+.plans_list_table_body {
+  height: 480px;
+  width: 90%;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+
+.plan_container {
+  width: 100%;
+  height: 95px;
+  border-bottom: 1px solid map-get($colors, txt);
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  padding: 7px 7px 7px 0;
+  box-sizing: border-box;
+
+  & p {
+    display: block;
+  }
+
+  .id {
+    width: 5%;
+
+  }
+
+  .title {
+    width: 20%;
+  }
+
+  .description {
+    width: 51%;
+    font-size: 1rem;
+  }
+
+  .week {
+    width: 14%;
+
+  }
+
+  .action {
+    width: 10%;
+    text-align: right;
+
+    .edit, .trash {
+      font-size: 20px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+
+    .edit {
+      color: map-get($colors, warning);
+    }
+
+    .trash {
+      color: map-get($colors, bin);
+    }
+
+  }
+}

@@ -1,0 +1,58 @@
+.call-to-action {
+  background-color: map-get($colors, header);
+  color: white;
+}
+
+.call-to-action_container {
+  height: 250px;
+}
+
+
+    .call-to-action_text {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+
+      & p {
+        font-size: 20px;
+        box-sizing: border-box;
+        padding: 40px 80px 60px 80px;
+      }
+      & p span {
+        font-size: 30px;
+        font-weight: bold;
+      }
+    }
+
+.call-to-action_btn_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+
+  .button_call-to-action {
+    width: 250px;
+    padding: 14px;
+    background-color: map-get($colors, highlighted);
+    color: white;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+
+    &:active {
+      transform: scale(0.8);
+    }
+
+  }
+}
+
+

@@ -1,0 +1,63 @@
+header {
+  height: 80px;
+  background-color: map-get($colors, header);
+  color: white;
+
+  .nav_container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & h1 {
+      font-family: 'Charmonman', cursive;
+      margin-left: 20px;
+
+      & a {
+        text-decoration: none;
+      }
+
+      & .logo_first_part {
+        color: white;
+      }
+
+      & .logo_second_part {
+        color: #E58A20;
+      }
+    }
+
+
+    & .nav {
+      list-style: none;
+      height: 80px;
+
+      li {
+        display: inline-block;
+
+        a {
+
+          padding: 30px;
+          display: block;
+          cursor: pointer;
+          font-weight: bold;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: map-get($colors, background);
+          transition: 0.1s ease-in-out;
+
+          &:hover {
+            color: map-get($colors, highlighted);
+          }
+
+          &.active {
+            color: map-get($colors, highlighted);
+
+            &.active:hover {
+              color: map-get($colors, background);
+            }
+          }
+        }
+      }
+    }
+  }
+}

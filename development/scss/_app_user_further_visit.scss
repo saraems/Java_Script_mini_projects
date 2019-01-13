@@ -1,0 +1,164 @@
+.further_visit {
+  display: none;
+}
+
+.pulpit_user_plan_action_panel {
+  display: flex;
+  justify-content: space-between;
+  height: 175px;
+  padding: 30px 50px 30px 40px;
+}
+
+
+.pulpit_user_plan_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: map-get($colors, background);
+  border: 2px dotted map-get($colors, success);
+  color: map-get($colors, success);
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+
+  & .plus {
+    font-size: 80px;
+    color: map-get($colors, success);
+    padding: 10px;
+
+  }
+}
+
+
+.app_plan_info {
+  height: 50px;
+  width: 100%;
+  border: 2px dotted;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  background-color: map-get($colors, background);
+}
+
+.pulpit_user_notifications_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.exclamation, .info, .checked {
+  font-size: 30px;
+  margin-left: 7px;
+  margin-right: 10px;
+}
+
+
+
+.info_container {
+  color: map-get($colors, info);
+  border-color: map-get($colors, info);
+}
+
+.checked_container {
+  color: map-get($colors, success);
+  border-color: map-get($colors, success);
+}
+
+.exclamation_container {
+  color: map-get($colors, warning);
+  border-color: map-get($colors, warning);
+}
+
+
+
+.cross {
+  position: absolute;
+  top:5px;
+  right: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.week_user_plan_list {
+  margin: 10px 50px 5px 40px;
+  height: 450px;
+  background-color: map-get($colors, background);
+  border: 2px dotted map-get($colors, sidePanel);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.week_plan_list_header {
+  color: map-get($colors, highlighted);
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & p {
+    padding: 10px;
+  }
+
+}
+
+
+.week_plan_paging {
+  height: 35px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 10px 5px 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  color: map-get($colors, highlighted);
+
+
+  .previous_week_plan, .next_week_plan {
+    cursor: pointer;
+    height: 20px;
+  }
+
+}
+
+
+
+table.week_plan_table {
+  padding-left: 40px;
+  max-width: 950px;
+  height: 65%;
+  font-size: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #e0e0e0;
+  border-collapse: collapse;
+
+  & tr {
+    border-top: 1px solid #e0e0e0;
+  }
+
+  & th {
+    font-weight: bold;
+    color: #5B605F;
+    text-align: left;
+    padding: 10px 40px 10px 40px;
+  }
+
+  td {
+    color: map-get($colors, sidePanel);
+    padding: 10px 40px 10px 40px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+}
+
+
+

@@ -1,0 +1,99 @@
+// CDN FONTAWESOME
+// <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+//
+// Sass:
+// https://fontawesome.com/how-to-use/on-the-web/using-with/sass
+
+
+//body{
+//  background-color: #BADA55;
+//}
+
+
+$colors: (
+        sidePanel: #5B605F,
+        header: #4a4a49,
+        highlighted: #FF6600,
+        background: #FFFFFA,
+        info: #3498DB,
+        warning: #FFB03B,
+        success: #468966,
+        bin: #BD4932,
+        txt: #A1A194
+);
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  color: map-get($colors, txt);
+}
+
+.container_big {
+  width: 1295px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.container_medium {
+  width: 100%;   
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.container_small {
+  width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+// ------------------------------------------------------------------------------------------
+
+//#5B605F - panel boczny, nawigacja
+//#4a4a49 - nagłówek, , kolor tekstu w kolumnach
+//#FF6600 - przyciski, wyróżnienia, nagłówki ekranów
+//#FFFFFA - kolor tła ekranów
+//#3498DB - kolor wiadomości typu info,
+//#FFB03B - kolor wiadomości typu warning
+//#468966 - kolor wiadomości typu success
+//#BD4932 - kolor ikony kosza
+//#A1A194 - kolor tekstu z wierszy w tabelach, ikony rozszerzonych funkcji
+
+
+
+//font-family: 'Open Sans', sans-serif;
+//font-family: 'Charmonman', cursive;
+
+
+
+
+@import "grid_main";
+@import "grid_small";
+
+
+@import "header";
+@import "index_footer";
+@import "index_newsletter";
+@import "index_call_to_action";
+@import "index_slider";
+@import "index_about_author";
+@import "index_about_app";
+
+@import "app_layout";
+@import "app_user_first_visit";
+@import "app_user_further_visit";
+
+@import "app_add_receip";
+@import "app_add_plan";
+
+@import "recipies_list";
+@import "schedules";
+
+
+

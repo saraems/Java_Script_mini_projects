@@ -1,0 +1,54 @@
+
+.newsletter {
+  background-color: map-get($colors, sidePanel);
+  //background-color: green;
+  color: white;
+  //color: red;
+  height: 150px;
+}
+
+.row {
+  display:flex;
+  justify-content: center;
+}
+
+.col-22-36 {
+  display: block;
+  justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+
+  & p {
+    font-size: 48px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    padding: 0px 10px;
+  }
+}
+
+.col-14-36 {
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 50px;
+  margin-bottom: 70px;
+
+  input {
+    width: 300px;
+    border-radius: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    height: 50px;
+    outline: none;
+    border: none;
+  }
+  .button-newsletter {
+    width: 90px;
+    padding: 14px;
+    background-color: map-get($colors, highlighted);
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,41 @@
+.aboutAuthor {
+  background-color: rgb(234, 234, 234);
+  color: #4a4a49;
+  height: 540px;
+
+  &.row {
+    display: flex;
+    justify-content: center;
+
+    &.col-12-36,
+    &.col-24-36 {
+      //
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+  }
+  & img {
+    border: none;
+    padding-top: 80px;
+  }
+
+  & h3 {
+    font-size: 32px;
+    padding: 85px 10px 20px 0;
+    color:black;
+    padding-left: 40px;
+    font-family: Arial, sans-serif;
+  }
+  & p{
+    font-size: 19px;
+    line-height: 30px;
+    padding-right: 100px;
+    padding-left: 40px;
+    letter-spacing:1px;
+    font-family: Arial, sans-serif;
+    color: black;
+
+  }
+}
