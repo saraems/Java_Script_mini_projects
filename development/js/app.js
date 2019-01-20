@@ -10,6 +10,15 @@ document.addEventListener("DOMContentLoaded",function(){
         firstVisitPage.style.display = "none";
         UserNamePanel.innerText = `${localStorage.savedName}`
     }
+
+    if (!localStorage.userRecipes) {
+        info.innerText = 'You still did not add any recipe.'
+    } else {
+        info.innerText = `You already have ${allRecipesfromStorage.length} recipes.`
+    }
+
+
+
 });
 
 
@@ -18,6 +27,7 @@ document.addEventListener("DOMContentLoaded",function(){
 var userName = "";
 var allRecipies = [];
 
+var allRecipesfromStorage = JSON.parse(localStorage.getItem("userRecipes"));
 var dataArray;
 
 
@@ -34,6 +44,8 @@ var addPlanPage = document.querySelector(".add_plan_page");
 var addPlan = document.querySelector(".add_plan");
 var addRecipe = document.querySelector(".add_recipe");
 
+
+var info = document.querySelector('.info_container p');
 var closeIcon = document.querySelectorAll("i.cross");
 
 var UsersPlanHeader = document.querySelector(".yours_plan_for_week_nr");
@@ -113,11 +125,11 @@ var recipeInredientsInput = document.querySelector('input#recipe_ingredients');
 
 
 function Recipe(id, title, description) {
-    this.id = id; // id przepisu
-    this.title = title; // nazwa przepisu
-    this.description = description; // opis przepisu
-    this.ingredients = []; // składniki przepisu
-    this.instructions = []; // instrukcje przepisu
+    this.id = id;
+    this.title = title;
+    this.description = description;
+    this.ingredients = [];
+    this.instructions = [];
 }
 
 
@@ -179,10 +191,6 @@ submitNewRecipe.addEventListener("click", function () {
 
 
 //Walidacja formularza dodaj plan
-
-// input#plan_title
-// textarea#plan_description
-//input#week_nr
 
 
 

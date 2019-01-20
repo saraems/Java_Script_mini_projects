@@ -29,7 +29,7 @@ var addRecipeToListBtn = document.querySelector('i.add_recipe_to_list');
 addRecipeToListBtn.addEventListener("click", function (e) {
     usersRecipesList.style.display = 'none';
     addRecipePanel.style.display = 'block'
-    
+
 });
 
 
@@ -42,8 +42,8 @@ var table = document.querySelector('.recipes_list_table_body');
 
 if (!localStorage.userRecipes) {
     var neE = document.createElement('div');
-    neE.className = 'recipe_list_first_visit'
-    neE.innerHTML = `You still do not have any recipes. Go to App's main panael and add new ones :)`;
+    neE.className = 'recipe_list_first_visit';
+    neE.innerHTML = `<p><br>You still do not have any recipes. Go to App's main panel and add few.</p>`;
     neE.className = 'recipe_container';
 
     table.appendChild(neE)
