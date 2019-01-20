@@ -43,6 +43,13 @@
   padding-left: 10px;
 }
 
+input#username {
+  border: 1px solid gray;
+  outline: none;
+  text-align: center;
+  height: 25px;
+}
+
 .app_first_visit_form p {
 
   font-size: 20px;

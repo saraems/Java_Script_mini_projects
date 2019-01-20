@@ -16,6 +16,10 @@ document.addEventListener("DOMContentLoaded",function(){
 // ZMIENNE
 
 var userName = "";
+var allRecipies = [];
+
+var dataArray;
+
 
 var saveUserNameBtn = document.querySelector(".button_submit_user_name");
 var userNameInput = document.querySelector("div.app_first_visit_form input#username");
@@ -97,13 +101,24 @@ previousPlan.addEventListener("click", function () {
 
 
 
-// Walidacja formularza dodaj przpis
+// Walidacja formularza dodaj przpis oraz zapis do local storage
 
-var recipeTitleInput = document.querySelector('input#recipe_title') 
-var recipeDescriptionTextarea = document.querySelector('textarea#recipe_description')
 
-var recipeInstructionsTextarea = document.querySelector('textarea#recipe_instructions')
-var recipeInredientsInput = document.querySelector('input#recipe_ingredients')
+
+var recipeTitleInput = document.querySelector('input#recipe_title') ;
+var recipeDescriptionTextarea = document.querySelector('textarea#recipe_description');
+
+var recipeInstructionsTextarea = document.querySelector('textarea#recipe_instructions');
+var recipeInredientsInput = document.querySelector('input#recipe_ingredients');
+
+
+function Recipe(id, title, description) {
+    this.id = id; // id przepisu
+    this.title = title; // nazwa przepisu
+    this.description = description; // opis przepisu
+    this.ingredients = []; // składniki przepisu
+    this.instructions = []; // instrukcje przepisu
+}
 
 
 var submitNewRecipe = document.querySelector('button#button_add_recipe');
@@ -121,9 +136,45 @@ submitNewRecipe.addEventListener("click", function () {
 
     if (!recipeInredientsInput.value) {
         recipeInredientsInput.style.border = '2px solid red'
-    } 
-    
-})
+    }
+
+    if (recipeTitleInput.value  && recipeInstructionsTextarea.value && recipeInredientsInput.value){
+
+        var receipeTitle = recipeTitleInput.value;
+        var receipeInstructions = recipeInstructionsTextarea.value;
+        var recipeInredients = recipeInredientsInput.value;
+        var recipeDescription = recipeDescriptionTextarea.value;
+
+
+        var recipe = new Recipe(allRecipies.length+1, receipeTitle, recipeDescription);
+
+        allRecipies.push(recipe);
+
+        localStorage.setItem('userRecipes', JSON.stringify(allRecipies));
+
+
+        console.log(recipeDescriptionTextarea.value, recipeTitleInput.value, recipeInstructionsTextarea.value, recipeInredientsInput.value);
+
+        recipeInstructionsTextarea.style.border = '1px solid rgb(161, 161, 148)';
+        recipeInredientsInput.style.border = '1px solid rgb(161, 161, 148)';
+        recipeTitleInput.style.border = '1px solid rgb(161, 161, 148)';
+
+        recipeTitleInput.value = '';
+        recipeInstructionsTextarea.value = '';
+        recipeInredientsInput.value = '';
+        recipeDescriptionTextarea.value = '';
+
+
+    }
+});
+
+
+
+// Dodaj instrukcje do przepisu
+
+
+
+
 
 
 
@@ -135,8 +186,8 @@ submitNewRecipe.addEventListener("click", function () {
 
 
 
-var planTitleInput = document.querySelector('input#plan_title')
-var planWeekInput = document.querySelector('input.week_nr')
+var planTitleInput = document.querySelector('input#plan_title');
+var planWeekInput = document.querySelector('input.week_nr');
 
 var submitNewPlan = document.querySelector('button#button_add_plan');
 
@@ -150,4 +201,4 @@ submitNewPlan.addEventListener("click", function () {
     if (!planWeekInput.value) {
         planWeekInput.style.border = '2px solid red'
     } 
-})
+});

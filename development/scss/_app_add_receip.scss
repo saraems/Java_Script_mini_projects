@@ -187,13 +187,12 @@
       border: 1px solid map-get($colors, highlighted);
 
     }
-
   }
 }
 
 
 .recipe {
-  min-height: 200px;
+  height: 40%;
   overflow-y: scroll;
   width: 90%;
   margin-right: 15px;

@@ -2,9 +2,13 @@ document.addEventListener("DOMContentLoaded",function(){
     // funkcja do uzupełnienia, jeżeli user wchodzi pierwszy raz plan ma pokazywać nastepny tydzień
 // jeżeli jest to kolejna wizyta uzytkownika, funkcja ma pokazywać plan na obecny tydzień
    
-    UserNamePanel.innerText = `${localStorage.savedName}`
-   
+    UserNamePanel.innerText = `${localStorage.savedName}`;
+
+
+
 });
+
+var dataArray = JSON.parse(localStorage.getItem("userRecipes"));
 
 var UserNamePanel = document.querySelector("div.nav_userName p");
 
@@ -14,48 +18,49 @@ var removeRecipe = document.querySelector(".trash");
 
 
 
-
-
-
-
 // Przycisk dodawania nowego przepisu
 
-var usersRecipesList = document.querySelector('.users_recipes')
+var usersRecipesList = document.querySelector('.users_recipes');
 var addRecipePanel = document.querySelector(".add_recipe_page");
-var addRecipeToListBtn = document.querySelector('i.add_recipe_to_list')
+var addRecipeToListBtn = document.querySelector('i.add_recipe_to_list');
 
 
 
 addRecipeToListBtn.addEventListener("click", function (e) {
-    usersRecipesList.style.display = 'none'
+    usersRecipesList.style.display = 'none';
     addRecipePanel.style.display = 'block'
     
-})
+});
 
 
-// Walidacja formularza //#endregion
 
 
-var recipeTitleInput = document.querySelector('input#recipe_title') 
-var recipeDescriptionTextarea = document.querySelector('textarea#recipe_description')
+// Lista przepisów urzytkownika
 
-var recipeInstructionsTextarea = document.querySelector('textarea#recipe_instructions')
-var recipeInredientsInput = document.querySelector('input#recipe_ingredients')
+var table = document.querySelector('.recipes_list_table_body');
 
 
-submitNewRecipe.addEventListener("click", function () {
+if (!localStorage.userRecipes) {
+    var neE = document.createElement('div');
+    neE.className = 'recipe_list_first_visit'
+    neE.innerHTML = `You still do not have any recipes. Go to App's main panael and add new ones :)`;
+    neE.className = 'recipe_container';
 
-    if (!recipeTitleInput.value) {
-        recipeTitleInput.style.border = '2px solid red'
- 
-    }
+    table.appendChild(neE)
 
-    if (!recipeInstructionsTextarea.value) {
-        recipeInstructionsTextarea.style.border = '2px solid red'
-    } 
+} else {
 
-    if (!recipeInredientsInput.value) {
-        recipeInredientsInput.style.border = '2px solid red'
-    } 
-    
-})
+    dataArray.forEach(function (item) {
+
+        var newEl = document.createElement('div');
+        newEl.className = 'recipe_container';
+
+        newEl.innerHTML = ` <p class="id">${item.id}</p>
+        <p class="title">${item.title}</p>
+        <p class="description">${item.description}</p>
+        <p class="action"><i class="far fa-edit edit"></i><i class="fas fa-trash-alt trash"></i></p>`
+
+        table.appendChild(newEl)
+    })
+}
+
