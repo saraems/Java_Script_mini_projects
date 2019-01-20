@@ -1,13 +1,15 @@
-
+.user_recipes_ro_container {
+  height: 100%;
+}
 
 .recipes_list_container {
   width: 100%;
-  margin: 30px 50px 30px 40px;
+  margin: 30px 50px 0 40px;
 }
 
 .recipes_list {
-  height: 650px;
   width: 100%;
+  height: 95%;
   background-color: map-get($colors, background);
   border: 1px dotted map-get($colors, sidePanel);
   display: flex;
@@ -83,7 +85,7 @@
 }
 
 .recipes_list_table_body {
-  height: 480px;
+  height: 75%;
   width: 90%;
   margin-bottom: 40px;
   box-sizing: border-box;

@@ -8,13 +8,13 @@
 
 .side_panel_container {
   background-color: map-get($colors, sidePanel);
-  height: 710px;
+  height: calc(100vh - 80px);
   width: 20%;
 }
 
 .main_panel {
   background-image: url("../images/image.png");
-  height: 710px;
+  height: calc(100vh - 80px);
   width: 80%;
 }
 

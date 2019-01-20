@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded",function(){
     // funkcja do uzupełnienia, jeżeli user wchodzi pierwszy raz plan ma pokazywać nastepny tydzień
 // jeżeli jest to kolejna wizyta uzytkownika, funkcja ma pokazywać plan na obecny tydzień
-    UsersPlanHeader.innerHTML = `Twój plan tygodnia na ${week} tydzień: `;
+    UsersPlanHeader.innerHTML = `Your plan for ${week}th week: `;
 
     if (!localStorage.savedName) {
         firstVisitPage.style.display = "flex";
@@ -26,8 +26,9 @@ var furtherVisitPage = document.querySelector(".further_visit");
 var addRecipePage = document.querySelector(".add_recipe_page");
 var addPlanPage = document.querySelector(".add_plan_page");
 
-var addRecipe = document.querySelector(".add_recipe");
+
 var addPlan = document.querySelector(".add_plan");
+var addRecipe = document.querySelector(".add_recipe");
 
 var closeIcon = document.querySelectorAll("i.cross");
 
@@ -92,3 +93,61 @@ previousPlan.addEventListener("click", function () {
     console.log("previous");
 });
 
+
+
+
+
+// Walidacja formularza dodaj przpis
+
+var recipeTitleInput = document.querySelector('input#recipe_title') 
+var recipeDescriptionTextarea = document.querySelector('textarea#recipe_description')
+
+var recipeInstructionsTextarea = document.querySelector('textarea#recipe_instructions')
+var recipeInredientsInput = document.querySelector('input#recipe_ingredients')
+
+
+var submitNewRecipe = document.querySelector('button#button_add_recipe');
+
+submitNewRecipe.addEventListener("click", function () {
+
+    if (!recipeTitleInput.value) {
+        recipeTitleInput.style.border = '2px solid red'
+ 
+    }
+
+    if (!recipeInstructionsTextarea.value) {
+        recipeInstructionsTextarea.style.border = '2px solid red'
+    } 
+
+    if (!recipeInredientsInput.value) {
+        recipeInredientsInput.style.border = '2px solid red'
+    } 
+    
+})
+
+
+
+//Walidacja formularza dodaj plan
+
+// input#plan_title
+// textarea#plan_description
+//input#week_nr
+
+
+
+var planTitleInput = document.querySelector('input#plan_title')
+var planWeekInput = document.querySelector('input.week_nr')
+
+var submitNewPlan = document.querySelector('button#button_add_plan');
+
+submitNewPlan.addEventListener("click", function () {
+
+    if (!planTitleInput.value) {
+        planTitleInput.style.border = '2px solid red'
+ 
+    }
+
+    if (!planWeekInput.value) {
+        planWeekInput.style.border = '2px solid red'
+    } 
+})

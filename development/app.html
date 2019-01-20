@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
-  <title>Zaplanuj Jedzonko</title>
+  <title>Plan Your Diet</title>
   <link rel="stylesheet" href="./css/custom.css" />
   <script src="./js/app.js" charset="utf-8"></script>
 
@@ -16,8 +16,7 @@
 
   <div class="container_medium nav_container">
 
-    <h1><a href="index.html"><span class="logo_first_part">Zaplanuj</span><span class="logo_second_part"> Jedzonko</span></a></h1>
-
+    <h1><a href="index.html"><span class="logo_first_part">Plan</span><span class="logo_second_part"> Your</span><span class="logo_first_part"> Diet</span></a></h1>
     <div class="nav user_name_panel">
       <div class="nav_userName"> <p>Name</p></div>
 
@@ -37,8 +36,8 @@
     <div class="col-6-36 side_panel_container">
 
       <div class="side_panel side_panel_active"><span class="side_panel_block"></span><a href="#" class="side_panel_link">Pulpit</a><i class="fas fa-angle-right arrow"></i></div>
-      <div class="side_panel"><a href="recipes.html" class="side_panel_link">Przepisy</a></div>
-      <div class="side_panel"><a href="schedules.html" class="side_panel_link">Plany</a></div>
+      <div class="side_panel"><a href="recipes.html" class="side_panel_link">Recipes</a></div>
+      <div class="side_panel"><a href="schedules.html" class="side_panel_link">Plans</a></div>
 
     </div>
 
@@ -74,7 +73,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row week_plan_container">
 
           <div class="col-14-14">
           <div class="week_user_plan_list">
@@ -95,43 +94,43 @@
             </tr>
 
             <tr>
-              <td>sniadanie</td>
-              <td>sniadanie</td>
-              <td>sniadanie</td>
-              <td>sniadanie</td>
-              <td>sniadanie</td>
+              <td>breakfast</td>
+              <td>breakfast</td>
+              <td>breakfast</td>
+              <td>breakfast</td>
+              <td>breakfast</td>
             </tr>
 
             <tr>
-              <td>drugie śniadanie</td>
-              <td>drugie śniadanie</td>
-              <td>drugie śniadanie</td>
-              <td>drugie śniadanie</td>
-              <td>drugie śniadanie</td>
+              <td>brunch</td>
+              <td>brunch</td>
+              <td>brunch</td>
+              <td>brunch</td>
+              <td>brunch</td>
             </tr>
 
             <tr>
-              <td>zupa</td>
-              <td>zupa</td>
-              <td>zupa</td>
-              <td>zupa</td>
-              <td>zupa</td>
+              <td>soup</td>
+              <td>soup</td>
+              <td>soup</td>
+              <td>soup</td>
+              <td>soup</td>
             </tr>
 
             <tr>
-              <td>drugie danie</td>
-              <td>drugie danie</td>
-              <td>drugie danie</td>
-              <td>drugie danie</td>
-              <td>drugie danie</td>
+              <td>main  course</td>
+              <td>main  course</td>
+              <td>main  course</td>
+              <td>main  course</td>
+              <td>main  course</td>
             </tr>
 
             <tr>
-              <td>kolacja</td>
-              <td>kolacja</td>
-              <td>kolacja</td>
-              <td>kolacja</td>
-              <td>kolacja</td>
+              <td>diner</td>
+              <td>diner</td>
+              <td>diner</td>
+              <td>diner</td>
+              <td>diner</td>
             </tr>
 
           </table>
@@ -161,8 +160,8 @@
 
               <div class="recipes_list_header">
 
-                <p>Nowy przepis</p>
-                <button class="button_add_recipe">Zapisz i zamknij </button>
+                <p>New Receip</p>
+                <button class="button_add" id="button_add_recipe">Save and close </button>
 
               </div>
 
@@ -170,15 +169,15 @@
                 <form class="add_recipe_form">
                   <div class="recipe-title">
 
-                    <label>Nazwa przepisu</label>
-                    <input name="title" type="text" placeholder="Zapiekanka z ziemniakami i brukselką">
-
+                    <label for="recipe_title">Recipe title</label>
+                    <input  name="title" type="text" id="recipe_title" placeholder="">
+                   
                   </div>
 
                   <div class="recipe-description">
 
-                    <label>Opis przepisu</label>
-                    <textarea id="recipe-description" rows="3" placeholder="Mamusina najlepsza zapiekanka pod słońcem. Można ją podać jako główne danie albo jako kolację. W zapiekance możesz użyć również kiełbasy paprykowej sprawi ona, że zapiekanka będzie ostrzejsza w smaku. Zgodnie z zalecanimi Makłowicza."></textarea>
+                    <label for="recipe_description">Recipe description</label>
+                    <textarea rows="3" name="description" id="recipe_description"  placeholder=""></textarea>
 
                   </div>
                 </form>
@@ -189,7 +188,7 @@
 
                 <div class="add_recipe_list_description">
                   <div class="add_recipe_list_header">
-                    <p>Instrukcje</p>
+                    <p>Instructions</p>
                   </div>
                   <div class="add_recipe_description">
                     <textarea id="recipe_instructions" rows="3"></textarea>
@@ -205,10 +204,10 @@
 
                 <div class="add_recipe_list_ingredient">
                   <div class="add_recipe_list_header">
-                    <p>Składnik</p>
+                    <p>Ingridients</p>
                   </div>
                   <div class="add_recipe_ingredient">
-                    <input type="text">
+                    <input name="ingredient" type="text" id="recipe_ingredients">
                     <i class="fas fa-plus-square add_me" id="add_ingredient"></i>
                   </div>
                   <div class="recipe">
@@ -231,8 +230,8 @@
 
 
           <div class="add_plan_header">
-            <p>Nowy plan</p>
-            <button class="button_add_recipe" type="submit">Zapisz i zamknij </button>
+            <p>New schedule</p>
+            <button class="button_add" id="button_add_plan" type="submit">Save and close </button>
           </div>
 
 
@@ -240,17 +239,17 @@
             <form class="add_plan_form">
 
               <div class="plan_form_element">
-                <label>Nazwa planu</label>
-                <input name="title" type="text" placeholder="Plan na jarski tydzień">
+                <label>Plan title</label>
+                <input name="title" type="text" id="plan_title" placeholder="">
               </div>
 
               <div class="plan_form_element">
-                <label>Opis planu</label>
-                <textarea id="recipe-description" rows="3" placeholder=""></textarea>
+                <label for="plan_description">Plan description</label>
+                <textarea rows="3" placeholder="" id="plan_description"></textarea>
               </div>
 
-              <div class="plan_form_element">
-                <label>Numer tygodnia</label>
+              <div class="plan_form_element_week">
+                <label>Week's number</label>
                 <input name="title" type="text" placeholder="2" class="week_nr">
               </div>
 
@@ -264,69 +263,15 @@
             <table class="add_plan_table">
               <tr class="table_head">
                 <th></th>
-                <th>Śniadanie</th>
-                <th>Drugie śniadanie</th>
-                <th>Zupa</th>
-                <th>Drugie danie</th>
-                <th>Kolacja</th>
+                <th>Breakfast</th>
+                <th>Brunch</th>
+                <th>Soup</th>
+                <th>Main course</th>
+                <th>Diner</th>
               </tr>
 
               <tr>
-                <th class="week_day">Poniedziałek</th>
-                <td>
-                  <select name="recipes_selection" id="">
-
-                    <option>Zapiekanka z ziemniakami i brukselka</option>
-                    <option>Jakies kolejne zapisane sniadanie</option>
-                    <option>Drugie danie przepis deluxe</option>
-                    <option>Kolacja na wypasie</option>
-
-                  </select>
-                </td>
-                <td>
-                  <select name="recipes_selection" id="">
-
-                    <option>Zapiekanka z ziemniakami i brukselka</option>
-                    <option>Jakies kolejne zapisane sniadanie</option>
-                    <option>Drugie danie przepis deluxe</option>
-                    <option>Kolacja na wypasie</option>
-
-                  </select>
-                </td>
-                <td>
-                  <select name="recipes_selection" id="">
-
-                    <option>Zapiekanka z ziemniakami i brukselka</option>
-                    <option>Jakies kolejne zapisane sniadanie</option>
-                    <option>Drugie danie przepis deluxe</option>
-                    <option>Kolacja na wypasie</option>
-
-                  </select>
-                </td>
-                <td>
-                  <select name="recipes_selection" id="">
-
-                    <option>Zapiekanka z ziemniakami i brukselka</option>
-                    <option>Jakies kolejne zapisane sniadanie</option>
-                    <option>Drugie danie przepis deluxe</option>
-                    <option>Kolacja na wypasie</option>
-
-                  </select>
-                </td>
-                <td>
-                  <select name="recipes_selection" id="">
-
-                    <option>Zapiekanka z ziemniakami i brukselka</option>
-                    <option>Jakies kolejne zapisane sniadanie</option>
-                    <option>Drugie danie przepis deluxe</option>
-                    <option>Kolacja na wypasie</option>
-
-                  </select>
-                </td>
-              </tr>
-
-              <tr>
-                <th class="week_day">Wtorek</th>
+                <th class="week_day">Monday</th>
                 <td>
                   <select name="recipes_selection" id="">
 
@@ -380,7 +325,7 @@
               </tr>
 
               <tr>
-                <th class="week_day">Środa</th>
+                <th class="week_day">Thuseday</th>
                 <td>
                   <select name="recipes_selection" id="">
 
@@ -433,9 +378,8 @@
                 </td>
               </tr>
 
-
               <tr>
-                <th class="week_day">Czwartek</th>
+                <th class="week_day">Wensday</th>
                 <td>
                   <select name="recipes_selection" id="">
 
@@ -490,7 +434,62 @@
 
 
               <tr>
-                <th class="week_day">Piątek</th>
+                <th class="week_day">Thursday</th>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+                <td>
+                  <select name="recipes_selection" id="">
+
+                    <option>Zapiekanka z ziemniakami i brukselka</option>
+                    <option>Jakies kolejne zapisane sniadanie</option>
+                    <option>Drugie danie przepis deluxe</option>
+                    <option>Kolacja na wypasie</option>
+
+                  </select>
+                </td>
+              </tr>
+
+
+              <tr>
+                <th class="week_day">Friday</th>
                 <td>
                   <select name="recipes_selection" id="">
 
