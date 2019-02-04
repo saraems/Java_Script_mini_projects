@@ -58,7 +58,7 @@ if (!localStorage.userRecipes) {
         newEl.innerHTML = ` <p class="id">${item.id}</p>
         <p class="title">${item.title}</p>
         <p class="description">${item.description}</p>
-        <p class="action"><i class="far fa-edit edit"></i><i class="fas fa-trash-alt trash"></i></p>`
+        <p class="action"><i class="far fa-edit edit"></i><i class="fas fa-trash-alt trash"></i></p>`;
 
         table.appendChild(newEl)
     })
